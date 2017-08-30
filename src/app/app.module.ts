@@ -7,11 +7,13 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 
 import {HttpModule} from '@angular/http';
+import { ObjectToArrayPipe } from './object-to-array.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     CircularComponent,
-    SearchComponent
+    SearchComponent,
+    ObjectToArrayPipe
   ],
   imports: [
     BrowserModule,

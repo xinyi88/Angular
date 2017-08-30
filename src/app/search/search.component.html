@@ -2,5 +2,5 @@
 <button (click)="getUsers()">Search</button>
 <div>{{countText}}</div>
 <ol *ngIf="searchText">
-    <li *ngFor="let text of searchText">{{text.title}}</li>   
+    <li *ngFor="let text of hack(searchText)">{{text.title}}</li>   
 </ol>

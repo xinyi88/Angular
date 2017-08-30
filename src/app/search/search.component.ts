@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github/github.service'; // import githubservice
+
+import { ObjectToArrayPipe  } from '../object-to-array.pipe';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -9,7 +12,9 @@ import {GithubService} from '../github/github.service'; // import githubservice
 export class SearchComponent implements OnInit {
    public searchText;
    public countText;
-  constructor(private githubService: GithubService) { }
+  constructor(private githubService: GithubService) {
+
+   }
 
   ngOnInit() {
 
@@ -22,10 +27,16 @@ export class SearchComponent implements OnInit {
   getUsers() {
     this.githubService.getUser(this.searchText).subscribe(
       res => {
-       this.searchText = res;
        this.countText = res.length;
+       this.searchText = res;
+       console.log(res);
       }
     );
+  }
+
+  hack(val) {
+    val = Array.from(val);
+    return val;
   }
 }
 
