@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github/github.service'; // import githubservice
 
-import { ObjectToArrayPipe  } from '../object-to-array.pipe';
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -32,11 +30,6 @@ export class SearchComponent implements OnInit {
        console.log(res);
       }
     );
-  }
-
-  hack(val) {
-    val = Array.from(val);
-    return val;
   }
 }
 
