@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { InteractionComponent } from './interaction/interaction.component';
 export const appRoutes: Routes = [
     {
         path: 'circular',
