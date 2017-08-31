@@ -1,3 +1,23 @@
 <p>
   search-result works!
 </p>
+<table class="table">
+  <thead>
+     <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+     </tr>
+    </thead>
+  <tbody> 
+    <tr *ngIf="user">
+         <th>{{user.id}}</th>
+         <th>{{user.title}}</th>
+         <th>{{user.body}}</th>
+      </tr>
+    </tbody>
+   
+    
+         
+</table>
+ 

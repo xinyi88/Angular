@@ -1,8 +1,8 @@
 <input type="text" (keyup)="onKeyup($event)">
 <button (click)="getUsers()" class="btn btn-danger">Search</button>
-<div>{{countText}}</div>
-<ol *ngIf="searchText">
-    <li *ngFor="let text of searchText | objectToArray">
+<div *ngIf="searchResult">{{countText}}</div>
+<ol *ngIf="searchResult">
+    <li *ngFor="let text of searchResult | objectToArray">
       
         <button (click)="showUserDetail(text)">{{text.id}}</button> 
          {{text.body}}

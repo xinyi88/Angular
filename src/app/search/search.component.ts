@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
    public searchText;
    public countText;
+   public searchResult;
   constructor(private router: Router, private githubService: GithubService) {
 
    }
@@ -31,7 +32,7 @@ export class SearchComponent implements OnInit {
     this.githubService.getUser(this.searchText).subscribe(
       res => {
        this.countText = res.length;
-       this.searchText = res;
+       this.searchResult = res;
        console.log(res);
       }
     );

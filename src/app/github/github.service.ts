@@ -6,7 +6,15 @@ import 'rxjs/add/operator/map';
 export class GithubService {
 
   constructor(private http: Http) { }
-
+  getUserDetail(id): Observable<any> {
+    const url = 'https://jsonplaceholder.typicode.com/posts?id=' + id;
+    return this.http.get(url).map(
+      res => {
+        const data = res.json();
+        return data;
+      }
+    );
+  }
   getUser(searchText): Observable<any> {
     // cross domain issue with this api
     // const url = 'http://api.github.com/search/users?q=' + searchText;
