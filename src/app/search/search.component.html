@@ -1,12 +1,10 @@
 <input type="text" (keyup)="onKeyup($event)">
-<button (click)="getUsers()">Search</button>
+<button (click)="getUsers()" class="btn btn-danger">Search</button>
 <div>{{countText}}</div>
 <ol *ngIf="searchText">
-    <li *ngFor="let text of searchText | objectToArray">{{text.title}}</li>   
+    <li *ngFor="let text of searchText | objectToArray">
+      
+        <button (click)="showUserDetail(text)">{{text.id}}</button> 
+         {{text.body}}
+    </li>   
 </ol>
-
-<!-- <form class="example-form">
-        <md-form-field class="example-full-width">
-          <input mdInput placeholder="Favorite food" value="Sushi">
-        </md-form-field>
-      </form> -->
