@@ -21,5 +21,6 @@
 
 <!-- bind childNumber to parentNumber, and we show it in child component -->
 <app-interaction [childNumber]="parentNumber.number"></app-interaction>
+<app-circular *ngFor="let name of list" [child]='name'></app-circular>
 <router-outlet></router-outlet>
 

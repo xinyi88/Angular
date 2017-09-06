@@ -12,4 +12,5 @@ export class AppComponent {
   parentNumber: any= {
     number: 15
   };
+  public list = [ 'Mr.', 'Ms.', ' ', 'Sr.'];
 }

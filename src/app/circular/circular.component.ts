@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-circular',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./circular.component.css']
 })
 export class CircularComponent implements OnInit {
-
+  private _setterGetter = '';
+  private _forParent = '';
   public happyText = 'Manager is on vacation';
 
   public myTodos = [
@@ -22,5 +23,21 @@ export class CircularComponent implements OnInit {
   }
   makeHappier() {
     this.happyText = 'Manager got fired';
+  }
+
+  // normal usage: get and set to init private parameter
+  set name(name: string){
+    this._setterGetter = name;
+  }
+  get name(): string{
+    return this._setterGetter;
+  }
+
+  @Input()
+  set child(name: string){
+    this._forParent = (name && name.trim()) || '<no name set>';
+  }
+  get child(): string{
+    return this._forParent;
   }
 }
