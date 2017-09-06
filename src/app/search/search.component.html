@@ -2,8 +2,7 @@
 <button (click)="getUsers()" class="btn btn-danger">Search</button>
 <div *ngIf="searchResult">{{countText}}</div>
 <ol *ngIf="searchResult">
-    <li *ngFor="let text of searchResult">
-      
+    <li *ngFor="let text of searchResult">     
         <button (click)="showUserDetail(text)">{{text.id}}</button> 
          {{text.body}}
     </li>   

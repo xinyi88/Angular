@@ -15,13 +15,15 @@ import { appRoutes } from './app.routes';
 import {HttpModule} from '@angular/http';
 import { ObjectToArrayPipe } from './pipe/object-to-array.pipe';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { InteractionComponent } from './interaction/interaction.component';
 @NgModule({
   declarations: [
     AppComponent,
     CircularComponent,
     SearchComponent,
     ObjectToArrayPipe,
-    SearchResultComponent
+    SearchResultComponent,
+    InteractionComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // step 3
