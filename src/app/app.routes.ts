@@ -3,6 +3,7 @@ import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { InteractionComponent } from './interaction/interaction.component';
+import { VotetakerComponent } from './votetaker/votetaker.component';
 export const appRoutes: Routes = [
     {
         path: 'circular',
@@ -15,5 +16,9 @@ export const appRoutes: Routes = [
     {
         path: 'user/:userId', // userId: parameter
         component: SearchResultComponent
+    },
+    {
+        path: 'vote',
+        component: VotetakerComponent
     }
 ];

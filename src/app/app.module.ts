@@ -16,6 +16,8 @@ import {HttpModule} from '@angular/http';
 import { ObjectToArrayPipe } from './pipe/object-to-array.pipe';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { InteractionComponent } from './interaction/interaction.component';
+import { VoterComponent } from './voter/voter.component';
+import { VotetakerComponent } from './votetaker/votetaker.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { InteractionComponent } from './interaction/interaction.component';
     SearchComponent,
     ObjectToArrayPipe,
     SearchResultComponent,
-    InteractionComponent
+    InteractionComponent,
+    VoterComponent,
+    VotetakerComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // step 3
