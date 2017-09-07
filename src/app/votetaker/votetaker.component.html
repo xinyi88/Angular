@@ -1,3 +1,4 @@
-<p>
-  votetaker works!
-</p>
+<h2>Should muggles be kicked out?</h2>
+<h3>Agree: {{agreed}}; disagreed: {{disagreed}}</h3>
+<!-- [name],(onVoted) all are app-voter -->
+<app-voter *ngFor="let name of votes" [name]= name (onVoted)='onVoted($event)'></app-voter>
