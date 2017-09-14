@@ -7,8 +7,10 @@ import { Signup } from './signup';
   styleUrls: ['./template-form.component.css']
 })
 export class TemplateFormComponent implements OnInit {
-  model = new Signup('', '');
+  model = new Signup('', '', 'Please select...');
   // model: Signup;
+
+  classifyVal = ['class 1', 'class 2', 'class 3'];
   constructor() { }
 
   ngOnInit() {
