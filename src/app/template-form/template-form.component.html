@@ -33,9 +33,11 @@
                id="classify" 
                class="form-control"
                [(ngModel)]="model.classify">
-         <option *ngFor="let val of classifyVal" [value]="val">{{val}}</option>
+         <option *ngFor="let pow of classifyVal" [value]="pow">{{pow}}</option>
        </select>
     </div>
     <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Sign Up</button>
   </form>
+
+  
 </div>

@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+
+import { DropdownModule } from 'primeng/primeng';
 
 // step 1: create a file to store all router information
 // step 2
@@ -37,7 +40,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     RouterModule.forRoot(appRoutes), // step 3
     BrowserModule,
     HttpModule,
-    FormsModule // this allows the application access to all of the template-driven forms feature, inlcude NgModule
+    FormsModule, // this allows the application access to all of the template-driven forms feature, inlcude NgModule
+    DropdownModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

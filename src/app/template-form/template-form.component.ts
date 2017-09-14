@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'; // step 1
+import { SelectItem } from 'primeng/primeng';
 import { Signup } from './signup';
+
 @Component({
   selector: 'app-template-form',
   templateUrl: './template-form.component.html',
@@ -9,9 +11,20 @@ import { Signup } from './signup';
 export class TemplateFormComponent implements OnInit {
   model = new Signup('', '', 'Please select...');
   // model: Signup;
+  classifyVal = ['class 1', 'class 2'];
 
-  classifyVal = ['class 1', 'class 2', 'class 3'];
-  constructor() { }
+  cities: SelectItem[];
+  selectedCity: string;
+
+  constructor() {
+    this.cities = [];
+    this.cities.push({label: 'Select City', value: null});
+    this.cities.push({label: 'New York', value: {id: 1, name: 'New York', code: 'NY'}});
+    this.cities.push({label: 'Rome', value: {id: 2, name: 'Rome', code: 'RM'}});
+    this.cities.push({label: 'London', value: {id: 3, name: 'London', code: 'LDN'}});
+    this.cities.push({label: 'Istanbul', value: {id: 4, name: 'Istanbul', code: 'IST'}});
+    this.cities.push({label: 'Paris', value: {id: 5, name: 'Paris', code: 'PRS'}});
+  }
 
   ngOnInit() {
   }
