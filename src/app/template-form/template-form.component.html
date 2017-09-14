@@ -1,0 +1,32 @@
+<div class="container">
+  <form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)">
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" 
+            [(ngModel)]="model.email" 
+            required 
+            #emailAlias="ngModel" 
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            placeholder="Please email"
+            #spy>
+     <br/>
+     State: {{spy.className}}
+      <div [hidden]="emailAlias.valid || emailAlias.pristine" class="alert alert-danger">
+        Email format 
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label for="rememberMe">Remember Me</label>
+      <input type="checkbox" name="rememberMe" id="rememberMe" ngModel>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Sign Up</button>
+  </form>
+</div>

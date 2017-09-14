@@ -4,6 +4,8 @@ import { SearchComponent } from './search/search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import { VotetakerComponent } from './votetaker/votetaker.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 export const appRoutes: Routes = [
     {
         path: 'circular',
@@ -20,5 +22,13 @@ export const appRoutes: Routes = [
     {
         path: 'vote',
         component: VotetakerComponent
+    },
+    {
+        path: 'template',
+        component: TemplateFormComponent
+    },
+    {
+        path: 'reactive',
+        component: ReactiveFormComponent
     }
 ];

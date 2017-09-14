@@ -18,6 +18,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import { VoterComponent } from './voter/voter.component';
 import { VotetakerComponent } from './votetaker/votetaker.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +29,15 @@ import { VotetakerComponent } from './votetaker/votetaker.component';
     SearchResultComponent,
     InteractionComponent,
     VoterComponent,
-    VotetakerComponent
+    VotetakerComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // step 3
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule // this allows the application access to all of the template-driven forms feature, inlcude NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
