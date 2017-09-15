@@ -6,6 +6,7 @@ import { InteractionComponent } from './interaction/interaction.component';
 import { VotetakerComponent } from './votetaker/votetaker.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateForm2Component } from './template-form2/template-form2.component';
 export const appRoutes: Routes = [
     {
         path: 'circular',
@@ -30,5 +31,9 @@ export const appRoutes: Routes = [
     {
         path: 'reactive',
         component: ReactiveFormComponent
+    },
+    {
+        path: 'templateform',
+        component: TemplateForm2Component
     }
 ];

@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DropdownModule } from 'primeng/primeng';
 
@@ -23,6 +23,7 @@ import { VoterComponent } from './voter/voter.component';
 import { VotetakerComponent } from './votetaker/votetaker.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateForm2Component } from './template-form2/template-form2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     VoterComponent,
     VotetakerComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    TemplateForm2Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // step 3
@@ -42,7 +44,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HttpModule,
     FormsModule, // this allows the application access to all of the template-driven forms feature, inlcude NgModule
     DropdownModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
