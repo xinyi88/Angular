@@ -24,6 +24,7 @@ import { VotetakerComponent } from './votetaker/votetaker.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateForm2Component } from './template-form2/template-form2.component';
+import { ForbiddenValidatorDirective } from './directive/forbidden-name.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { TemplateForm2Component } from './template-form2/template-form2.componen
     VotetakerComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    TemplateForm2Component
+    TemplateForm2Component,
+    ForbiddenValidatorDirective
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // step 3

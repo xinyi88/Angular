@@ -2,6 +2,20 @@
   <form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)">
     
     <div class="form-group">
+      <label for="name">Name</label>
+      <input type="name" 
+             name="name" 
+             id="name" 
+             [(ngModel)]="model.name" 
+             appForbiddenName='bob'
+             required
+             #name="ngModel"
+             #aliasName>
+        State: {{aliasName.className}}   
+    </div>
+
+
+    <div class="form-group">
       <label for="email">Email</label>
       <input type="text" name="email" id="email" 
             [(ngModel)]="model.email" 
@@ -19,12 +33,28 @@
 
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" ngModel required>
+      <input type="password" 
+             name="password" 
+             id="password" 
+             [(ngModel)]="model.password" 
+             required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" 
+             name="age" 
+             id="age" 
+             [(ngModel)]="model.age" 
+             required>
     </div>
 
     <div class="form-group">
       <label for="rememberMe">Remember Me</label>
-      <input type="checkbox" name="rememberMe" id="rememberMe" ngModel>
+      <input type="checkbox" 
+             name="rememberMe" 
+             id="rememberMe" 
+             [(ngModel)]="model.rememberMe">
     </div>
 
     <div class="form-group">
@@ -38,6 +68,6 @@
     </div>
     <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Sign Up</button>
   </form>
-
+<div *ngIf="diagnostic">Form data: {{ diagnostic }}</div>
   
 </div>
