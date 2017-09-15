@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'app';
-  twoWayBinding = '';
+  twoWayBinding = 'Angular';
   parentNumber: any= {
     number: 15
   };

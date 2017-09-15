@@ -15,7 +15,7 @@ export class ForbiddenValidatorDirective implements Validator {
   @Input() appForbiddenName: string;
 
   validate(control: AbstractControl): {[key: string]: any} {
-    console.log(this.appForbiddenName);
+    // console.log(this.appForbiddenName);
     // console.log(control);
     return this.appForbiddenName ? forbiddenNameValidator(new RegExp(this.appForbiddenName, 'i'))(control)
                               : null;
